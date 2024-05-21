@@ -35,7 +35,7 @@ difference() {
 }
 
 
-module he(){
+module he_12(){
 // wings
 translate([0,0,31.5/2]) polar_array(0,6) cube(size=[2.5, 49, 31.5], center=true);
 
