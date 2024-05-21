@@ -12,7 +12,7 @@ ver= "12KUHE1-P+";
 
 
 //translate([0,52,0]) he_12();
-//cut_view();
+cut_view();
 
 //text
 
@@ -157,7 +157,7 @@ difference() {
 difference() {
     hull(){
     translate([0,0,116.8+35.85+16]) cylinder(r=49/2, h=.1, center=true); 
-    translate([0,0,116.8+35.85+42]) cylinder(r=16.4, h=.1, center=true); 
+    translate([0,0,116.8+35.85+42]) cylinder(r=13.8, h=.1, center=true); 
     }
     hull(){
     translate([0,0,116.8+35.85+16]) cylinder(r=49/2-2.5, h=.1, center=true); 
@@ -169,7 +169,7 @@ difference() {
 
 //detonator
 difference(){
-translate([0,0,116.8+35.85+42+12.5]) cylinder(r=16.4, h=25, center=true);
+translate([0,0,116.8+35.85+42+12.5]) cylinder(r=13.8, h=25, center=true);
 translate([0,0,116.8+35.85+42+12.5]) cylinder(r=10.4, h=27, center=true);
 
 }

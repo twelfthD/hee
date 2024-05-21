@@ -36,7 +36,7 @@ module text_ku() {
 
         }
 
-        #cylinder(r=24.2, h=500, center=true);
+        cylinder(r=24.2, h=500, center=true);
 
 
     }
@@ -58,7 +58,7 @@ module text_mod_ver() {
 
         }
 
-        #cylinder(r=24.2, h=500, center=true);
+        cylinder(r=24.2, h=500, center=true);
 
 
     }
@@ -93,8 +93,8 @@ translate([0,0,55/2]) cylinder(r=7.5, h=55, center=true);
 
 //slope wings pillar to load
 hull(){
-#translate([0,0,55]) cylinder(r=7.5, h=.1, center=true);
-#translate([0,0,55+42]) cylinder(r=49/2, h=.1, center=true);
+translate([0,0,55]) cylinder(r=7.5, h=.1, center=true);
+translate([0,0,55+42]) cylinder(r=49/2, h=.1, center=true);
 }
 
 //load
@@ -138,8 +138,8 @@ translate([0,0,55/2]) cylinder(r=7.5, h=55, center=true);
 
 //slope wings pillar to load
 hull(){
-#translate([0,0,55]) cylinder(r=7.5, h=.1, center=true);
-#translate([0,0,55+42]) cylinder(r=49/2, h=.1, center=true);
+translate([0,0,55]) cylinder(r=7.5, h=.1, center=true);
+translate([0,0,55+42]) cylinder(r=49/2, h=.1, center=true);
 }
 
 //load
