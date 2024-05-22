@@ -12,7 +12,7 @@ ver= "12KUHE1-P+";
 
 
 //translate([0,52,0]) he_12();
-cut_view();
+//cut_view();
 
 //text
 
@@ -82,55 +82,6 @@ difference() {
 }
 }
 
-
-module he_16()
-{
-// wings
-//translate([0,0,31.5/2]) polar_array(0,6) cube(size=[2.5, 49, 31.5], center=true); // 2.5 mm
-translate([0,0,31.5/2]) polar_array(0,6) cube(size=[2, 49, 31.5], center=true); // 2.2 mm
-
-
-
-//wings pillar
-translate([0,0,55/2]) cylinder(r=7.5, h=55, center=true);
-
-//slope wings pillar to load
-hull(){
-translate([0,0,55]) cylinder(r=7.5, h=.1, center=true);
-translate([0,0,55+42]) cylinder(r=49/2, h=.1, center=true);
-}
-
-//load
-difference() {
-   translate([0,0,116.8+16]) cylinder(r=49/2, h=71.6, center=true); 
-   translate([0,0,116.8+16]) cylinder(r=49/2-2.5, h=72, center=true); 
-
-}
-
-//load cap
-
-difference() {
-    hull(){
-    translate([0,0,116.8+35.85+16]) cylinder(r=49/2, h=.1, center=true); 
-    translate([0,0,116.8+35.85+42]) cylinder(r=22.16/2, h=.1, center=true); 
-    }
-    hull(){
-    translate([0,0,116.8+35.85+16]) cylinder(r=49/2-2.5, h=.1, center=true); 
-    translate([0,0,116.8+35.85+42]) cylinder(r=18.74/2-.4, h=.1, center=true); 
-    }
-
-
-}
-
-//detonator
-difference(){
-translate([0,0,116.8+35.85+42+9.7]) cylinder(r=22.16/2, h=19.40, center=true);
-translate([0,0,116.8+35.85+42+12.5]) cylinder(r=18.74/2-.4, h=27, center=true);
-
-}
-
-}
-
 module he_12() {
     // wings
     translate([0,0,31.5/2]) polar_array(0,6) cube(size=[wings_thickness, 49, 31.5], center=true);
@@ -157,7 +108,7 @@ module he_12() {
     difference() {
         hull(){
         translate([0,0,116.8+35.85+16]) cylinder(r=49/2, h=.1, center=true); 
-        translate([0,0,116.8+35.85+42]) cylinder(r=13.8, h=.1, center=true); 
+        translate([0,0,116.8+35.85+42]) cylinder(r=14, h=.1, center=true); 
         }
         hull(){
         translate([0,0,116.8+35.85+16]) cylinder(r=49/2-2.5, h=.1, center=true); 

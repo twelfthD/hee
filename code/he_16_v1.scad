@@ -6,10 +6,10 @@ $fa = .2;
 $fs = 1;
 $fn = 128;
 
-ver= "16KUHE1-P+";
+//ver= "16KUHE1-P+";
 
 
-//translate([0,52,0]) he_12();
+
 //cut_view();
 
 //text
@@ -17,7 +17,7 @@ ver= "16KUHE1-P+";
 difference() {
     he_16();
     text_ku();
-    text_mod_ver();
+    //text_mod_ver();
 
 }
 module text_ku() {
@@ -113,7 +113,7 @@ difference() {
     }
     hull(){
     translate([0,0,116.8+35.85+16]) cylinder(r=49/2-2.5, h=.1, center=true); 
-    translate([0,0,116.8+35.85+42]) cylinder(r=9.4, h=.1, center=true); 
+    translate([0,0,116.8+35.85+42]) cylinder(d=18.85, h=.1, center=true); 
     }
 
 
@@ -122,57 +122,11 @@ difference() {
 //detonator
 difference(){
 translate([0,0,116.8+35.85+42+9.7]) cylinder(r=11.08, h=19.40, center=true);
-translate([0,0,116.8+35.85+42+12.5]) cylinder(r=9.4, h=27, center=true);
+translate([0,0,116.8+35.85+42+12.5]) cylinder(d=18.85, h=27, center=true);
 
 }
 
 }
-
-module he_12() {
-    // wings
-    translate([0,0,31.5/2]) polar_array(0,6) cube(size=[2.5, 49, 31.5], center=true);
-
-
-    //wings pillar
-    translate([0,0,55/2]) cylinder(r=7.5, h=55, center=true);
-
-    //slope wings pillar to load
-    hull(){
-    translate([0,0,55]) cylinder(r=7.5, h=.1, center=true);
-    translate([0,0,55+42]) cylinder(r=49/2, h=.1, center=true);
-    }
-
-    //load
-    difference() {
-    translate([0,0,116.8+16]) cylinder(r=49/2, h=71.6, center=true); 
-    translate([0,0,116.8+16]) cylinder(r=49/2-2.5, h=72, center=true); 
-
-    }
-
-    //load cap
-
-    difference() {
-        hull(){
-        translate([0,0,116.8+35.85+16]) cylinder(r=49/2, h=.1, center=true); 
-        translate([0,0,116.8+35.85+42]) cylinder(r=26/2, h=.1, center=true); 
-        }
-        hull(){
-        translate([0,0,116.8+35.85+16]) cylinder(r=49/2-2.5, h=.1, center=true); 
-        translate([0,0,116.8+35.85+42]) cylinder(r=26/2.5, h=.1, center=true); 
-        }
-
-
-    }
-
-    //detonator
-    difference(){
-    translate([0,0,116.8+35.85+42+6.5]) cylinder(r=13, h=13, center=true);
-    translate([0,0,116.8+35.85+42+6.5]) cylinder(r=10.4, h=15, center=true);
-
-    }
-
-}
-
 
 
 
