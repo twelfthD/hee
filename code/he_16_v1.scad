@@ -14,12 +14,16 @@ $fn = 128;
 
 //text
 
-difference() {
-    he_16();
-    text_ku();
-    //text_mod_ver();
 
-}
+
+    difference() {
+        he_16();
+        text_ku();
+        //text_mod_ver();
+
+    }
+
+  
 module text_ku() {
     difference() {
         intersection() {
@@ -84,7 +88,7 @@ difference() {
 module he_16(){
 // wings
 //translate([0,0,31.5/2]) polar_array(0,6) cube(size=[2.5, 49, 31.5], center=true); // 2.5 mm
-translate([0,0,31.5/2]) polar_array(0,6) cube(size=[2, 49, 31.5], center=true); // 2.2 mm
+translate([0,0,31.5/2]) polar_array(0,6) cube(size=[2.4, 49, 31.5], center=true); // 2.2 mm
 
 
 
@@ -108,21 +112,23 @@ difference() {
 
 difference() {
     hull(){
-    translate([0,0,116.8+35.85+16]) cylinder(r=49/2, h=.1, center=true); 
+    translate([0,0,116.8+35.85+16]) cylinder(r=24.5, h=.1, center=true); 
     translate([0,0,116.8+35.85+42]) cylinder(r=11.08, h=.1, center=true); 
     }
     hull(){
-    translate([0,0,116.8+35.85+16]) cylinder(r=49/2-2.5, h=.1, center=true); 
-    translate([0,0,116.8+35.85+42]) cylinder(d=18.85, h=.1, center=true); 
+    translate([0,0,116.8+35.85+16]) cylinder(r=22, h=.1, center=true); 
+    translate([0,0,116.8+35.85+42]) cylinder(d=17.5, h=.1, center=true); 
     }
+    translate([0,0,116.8+35.85+42+14]) cylinder(d=19.2, h=50, center=true);
 
 
 }
 
 //detonator
 difference(){
-translate([0,0,116.8+35.85+42+9.7]) cylinder(r=11.08, h=19.40, center=true);
-translate([0,0,116.8+35.85+42+12.5]) cylinder(d=18.85, h=27, center=true);
+translate([0,0,116.8+35.85+42+12.8]) cylinder(r=11.1, h=25.75, center=true);
+translate([0,0,116.8+35.85+42+14]) cylinder(d=19.2, h=30, center=true);
+//#translate([0,0,116.8+35.85+42+14]) cylinder(d=19, h=30, center=true);
 
 }
 
