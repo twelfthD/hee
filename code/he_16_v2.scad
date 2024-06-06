@@ -1,6 +1,6 @@
 // he_16_v1
-
-
+use <trigger.scad>;
+use <16_shot.scad>;
 
 $fa = .2;
 $fs = 1;
@@ -8,22 +8,33 @@ $fn = 128;
 
 //ver= "16KUHE1-P+";
 
+cut_view();
 
+module cut_view(){
+ difference() {
+    union(){
+        color("Grey")he_16();
+        color("Red")rotate([180,0,0]) translate([0,0,-221.5 -4.5]) trigger();
+        rotate([180,0,0]) translate([0,0,-221.5 - .4]) 16_shot();
+    }
 
-//cut_view();
+    translate([0,-50,0])cube(size=[80, 80, 240], center=false);
+}
+
+}
 
 //text
 
 
 
-    difference() {
+    /* difference() {
         he_16();
         text_ku();
         //text_mod_ver();
 
-    }
+    } */
 
-
+    
 
 
 
@@ -82,12 +93,7 @@ module polar_array(radius, count, axis)
     }
 }
 
-module cut_view(){
-difference() {
-    he_16();
-    translate([0,-50,0])cube(size=[80, 80, 240], center=false);
-}
-}
+
 
 
 module he_16(){
@@ -137,19 +143,10 @@ translate([0,0,116.8+35.85+42+14]) cylinder(d=19.2, h=30, center=true);
 
 }
 
-// triger body
-
-#difference(){
-    translate([0,0,116.8+35.85+42+14]) cylinder(d=19.2, h=30, center=true);
-    translate([0,0,116.8+35.85+42+12.8]) cylinder(r=11.1, h=25.75, center=true);
-    
-    }
-
-
-//
 
 
 }
+
 
 
 
